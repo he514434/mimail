@@ -35,6 +35,7 @@ export default {
     },
     getCartCount () {
       this.axios.get('/carts/products/sum').then((res) => {
+        console.log(res)
         this.$store.dispatch('saveCount',res);
       })
     }
